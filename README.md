@@ -1,1 +1,3 @@
 ## RouletteSkeptic
+**Discussion**
+So, in case anyone runs across this and wonders ...  
