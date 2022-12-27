@@ -1,21 +1,30 @@
+from player import player
+
 payout = {
     "number": 35,
-    "group_12": 2,
+    "grp_2": 17,
+    "grp_3": 11,
+    "grp_4": 8,
+    "grp_5": 6,
+    "grp_6": 5,
+    "grp_12": 2,
     "hi_low": 1,
     "even_odd": 1,
     "color": 1
 }
 
-strategy = {
-    "base_unit": 10,
-    "base_bets": [
-        (("group_12", 2), 1),
-        (("group_12", 3), 1)
-    ],
-    "after_win": -1,
-    "after_loss": 2,
-    "max_u_ct": 10,
-    "start_bank": 2000,
-    "take_wins": 200,
-    "stop_loss": -99999
-}
+def add_bets():
+    curr_u = player["strategy"]["curr_u"]
+    u_mult = player["strategy"]["unit_mult"]
+
+    for b in player["strategy"]["bets"]:
+        player["curr_bets"].append(
+            (
+                curr_u * u_mult * b["bet_mult"],
+                b["bet_ty"],
+                b["bet_on"]
+            )
+        )
+
+    for b in player["curr_bets"]:
+        print(f"\tbet ${b[0]} on {b[1]} - {b[2]}")

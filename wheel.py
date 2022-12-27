@@ -16,7 +16,7 @@ def spin():
 
     if result in [37, 38]:
         spin_data |= [
-            ("hit", f"GRN {"0" * (39 - result)}")
+            ("hit", f"GRN {'0' * (39 - result)}")
         ]
     else:
 

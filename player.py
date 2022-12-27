@@ -16,14 +16,28 @@ player = {
         "base_u": 1,
         "curr_u": 1,
         "unit_mult": 10,
-        "bets": [],
+        "bets": [
+            {
+                "bet_mult": 1,
+                "bet_ty": "grp_12",
+                "bet_on": 2
+            },
+            {
+                "bet_mult": 1,
+                "bet_ty": "grp_12",
+                "bet_on": 3
+            }
+        ],
         "res_mod": {
             "win_op": "mult",
             "win_adj": 2,
             "lose_op": "abs",
             "lose_adj": 1
         }
-    }
+    },
+    "curr_bets": [
+
+    ]
 
 
 }
