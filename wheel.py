@@ -1,15 +1,14 @@
 import random
 
-def spin_res():
+def spin():
 
     reds = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
 
     spin_data = {
-        "number": "",
-        "color": "",
+        "hit": "",
         "even_odd": -1,
-        "hi_low": "",
-        "group_12": 0
+        "hi_low": -1,
+        "grp_12": -1
     }
 
     result = random.choice(list(range(1,39)))
@@ -17,20 +16,17 @@ def spin_res():
 
     if result in [37, 38]:
         spin_data |= [
-            ("number", "0" * (39 - result)),
-            ("color", "green"),
-            ("even_odd", -1),
-            ("hi_low", "na"),
-            ("group_12", 0)
+            ("hit", f"GRN {"0" * (39 - result)}")
         ]
     else:
 
+        color = "RED " if result in reds else "BLK "
+
         spin_data |= [
-            ("number", str(result)),
-            ("color", "red" if result in reds else "black"),
+            ("hit", f"{color}{str(result)}"),
             ("even_odd", result % 2),
-            ("hi_low", "low" if result <= 18 else "hi"),
-            ("group_12", ((result - 1) // 12) + 1)
+            ("hi_low", ((result - 1) // 18)),
+            ("grp_12", ((result - 1) // 12) + 1)
         ]
 
     return spin_data

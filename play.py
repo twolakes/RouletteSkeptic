@@ -14,8 +14,8 @@ strategy = {
     ],
     "after_win": -1,
     "after_loss": 2,
-    "max_u_ct": 20,
+    "max_u_ct": 10,
     "start_bank": 2000,
-    "take_wins": 1000,
+    "take_wins": 200,
     "stop_loss": -99999
 }
