@@ -1,8 +1,9 @@
 player = {
     "name": "",
+    "init_bank": 1000,
+    "curr_bank": 1000,
+
     "session": {
-        "init_bank": 1000,
-        "curr_bank": 1000,
         "sess_net": 0,
         "sess_max": 0,
         "rounds_pos": 0,
@@ -14,6 +15,7 @@ player = {
     },
     "strategy": {
         "base_u": 1,
+        "max_u": 999999,
         "curr_u": 1,
         "unit_mult": 10,
         "bets": [
@@ -30,14 +32,11 @@ player = {
         ],
         "res_mod": {
             "win_op": "mult",
-            "win_adj": 2,
-            "lose_op": "abs",
-            "lose_adj": 1
+            "win_adj": 0.5,
+            "lose_op": "mult",
+            "lose_adj": 2
         }
     },
-    "curr_bets": [
-
-    ]
-
+    "curr_bets": []
 
 }
