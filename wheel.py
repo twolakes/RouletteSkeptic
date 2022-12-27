@@ -6,7 +6,7 @@ def spin():
 
     spin = random.choice(list(range(1,39)))
     # spin = 38  <<<<<<<<<<< GET RID OF THIS
-    print(f"{spin}")
+    # print(f"{spin}")
 
     if spin in [37, 38]:
         result = f"GRN {str(spin)}"

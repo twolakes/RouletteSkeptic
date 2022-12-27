@@ -35,7 +35,9 @@ player = {
             "win_adj": 0.5,
             "lose_op": "mult",
             "lose_adj": 2
-        }
+        },
+        "take_win": 100,
+        "stop_loss": -256
     },
     "curr_bets": []
 

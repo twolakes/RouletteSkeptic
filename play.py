@@ -29,8 +29,8 @@ def add_bets():
             )
         )
 
-    for b in player["curr_bets"]:
-        print(f"\tbet ${b[0]} on {b[1]} - {b[2]}")
+    # for b in player["curr_bets"]:
+    #     print(f"\tbet ${b[0]} on {b[1]} - {b[2]}")
 
 
 def settle_bets(res):
@@ -59,7 +59,7 @@ def settle_bets(res):
             spin_net = spin_net + ((payout[b[1]] + 1) * b[0])
             res_lbl = "wins"
 
-        print(f"\tbet ${b[0]} on {b[1]} - {b[2]}  {res_lbl}")
+        # print(f"\tbet ${b[0]} on {b[1]} - {b[2]}  {res_lbl}")
 
 
     player["curr_bets"] = []
@@ -97,6 +97,6 @@ def settle_bets(res):
     elif player["session"]["sess_net"] < 0:
         player["session"]["rounds_neg"] = player["session"]["rounds_neg"] + 1
 
-    print(f"\nnet result for that spin:  ${spin_net}\n")
+    # print(f"\nnet result for that spin:  ${spin_net}\n")
 
-    feedback.rpt_sess_summ()
+    # feedback.rpt_sess_summ()
